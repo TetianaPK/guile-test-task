@@ -34,6 +34,11 @@ struct DayFlowCurrentTimeView: View {
                 .font(.caption2)
                 .monospacedDigit()
                 .frame(width: 60, height: 20, alignment: .leading)
+                .background {
+                    Rectangle()
+                        .fill(.background)
+                        .blur(radius: 5)
+                }
             
             Circle()
                 .fill(.red)
@@ -42,11 +47,6 @@ struct DayFlowCurrentTimeView: View {
             Rectangle()
                 .fill(.red)
                 .frame(height: 1)
-        }
-        .background {
-            Rectangle()
-                .fill(.background)
-                .blur(radius: 5)
         }
         .offset(y: offset)
     }
